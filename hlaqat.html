@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>عن الحلقات</title>
+  <link rel="stylesheet" href="style.css"> <!-- اربطه بملف CSS الخاص بك -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+
+    body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+    }
+    
+
+    
+
+    .mosques-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      min-height: 80vh;
+      align-items: center;
+    }
+
+    .mosque {
+      width: 250px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.171); /* خلفية سوداء شفافة */
+      color: #fff;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.596); /* توهج أبيض خفيف */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease both;
+    }
+
+    .mosque:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    }
+
+    .mosque h1 {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .map-link,
+    .website-link {
+      display: block;
+      margin: 8px 0;
+      font-size: 14px;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* أنيميشن الدخول */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+  .form-container {
+    width: 25% !important;
+  }
+}
+  </style>
+
+  
+
+    <!-- زر الهامبرغر -->
+     <nav>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- القائمة الجانبية -->
+  <div class="sidebar" id="sidebar">
+  <span class="closebtn" onclick="closeSidebar()">×</span> <!-- زر الإغلاق -->
+  <a href="index.html">الرئيسية</a>
+  <a href="hlaqat.html">عن الحلقات</a>
+  <a href="mosque.html">مواقع الجوامع</a>
+  <a href="register.html">سجل معنا</a>
+  <a href="contact.html">تواصل معنا</a>
+</div>
+</nav>
+  <!-- خلفية مظللة -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <script src="script.js"></script>
+
+
+  <header>
+    <div class="header-container">
+      <div class="logo">مجمع الفريان</div>
+      <div class="menu-btn" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+   <img src="logo.png" alt="شعار الموقع" class="main-logo">
+   <img src="arfaj.png" alt="شعار الموقع" class="arfaj-logo">
+    <img src="hila.png" alt="شعار الموقع" class="hila-logo">
+    <img src="qdamh.png" alt="شعار الموقع" class="qdamh-logo">
+    <img src="sfyan.png" alt="شعار الموقع" class="sfyan-logo">
+
+
+
+  <div class="mosques-container">
+    <section class="mosque">
+      <h1>حلقات العرفج</h1>
+      <p>حلقة قرآنية تهدف إلى تنمية العلاقة مع كتاب الله بتدبر وتلاوة خاشعة، في جو روحاني يعين على الثبات</p>  
+      
+    </section>
+
+    <section class="mosque">
+      <h1> حلقات الصفيان</h1>
+      <p>نتعلّم فيها المعاني العميقة للآيات، ونربط بين القرآن وواقعنا بأسلوب مبسّط يناسب جميع الأعمار</p> 
+      
+    </section>
+
+    <section class="mosque">
+      <h1>حلقات الصفيان</h1>
+      <p>تهتم بتثبيت الحفظ والمراجعة اليومية للقرآن، مع تحفيز المشاركين على تحقيق أهداف قرآنية أسبوعية</p>
+    
+      
+    </section>
+
+    <section class="mosque">
+      <h1>حلقات هيلة</h1>
+      <p>حلقة تركز على التلاوة بتجويد، مع لحظات تدبّر ووقوف مع معاني الرحمة والسكينة في القرآن الكريم</p>
+      
+    </section>
+  </div>
+  <footer>
+        <p>جميع الحقوق محفوظة &copy;  2025 مُجَمْع اْلفَرَيان</p>
+    </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('active');
+      document.querySelector('.overlay').classList.toggle('active');
+    }
+  </script>
+
+   <script>
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+</script>
+
+
+</body>
+</html>
